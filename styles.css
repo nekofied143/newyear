@@ -1,34 +1,50 @@
+/* Common styles for larger screens */
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    margin-top: 100px;
-    background-color: #f5f5f5;
-  }
-  
-  h1 {
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 20px;
-    color: #333;
-  }
-  
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin-top: 100px;
+  background-color: #f5f5f5;
+}
+
+h1 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+#countdown {
+  font-size: 70px;
+  font-weight: bold;
+  color: #FF6347;
+  margin-bottom: 50px;
+}
+
+/* Responsive styles for smaller screens */
+@media screen and (max-width: 768px) {
   #countdown {
-    font-size: 40px;
-    font-weight: bold;
-    color: #FF6347;
-    margin-bottom: 50px;
+    font-size: 60px; /* Increase font size for visibility on smaller screens */
   }
-  
-  /* Responsive styles for smaller screens */
-  @media screen and (max-width: 768px) {
-    #countdown {
-      font-size: 30px;
-    }
+}
+
+/* Additional responsive styles for even smaller screens */
+@media screen and (max-width: 480px) {
+  #countdown {
+    font-size: 80px; /* Further increase font size for very small screens */
   }
-  
-  /* Additional responsive styles for even smaller screens */
-  @media screen and (max-width: 480px) {
-    #countdown {
-      font-size: 20px;
-    }
+
+  /* Display countdown in a different format for smaller screens */
+  #countdown::before {
+    content: '';
+    display: block;
+    font-size: 60px; /* Font size for individual countdown units */
+    margin-bottom: 10px; /* Add some space between units */
   }
+
+  #countdown::after {
+    content: 'D\nH\nM\nS'; /* Display individual units with line breaks */
+    display: block;
+    font-size: 60px; /* Font size for the labels */
+    line-height: 1.2; /* Adjust line height for better readability */
+  }
+}
