@@ -10,9 +10,8 @@ body {
 #year {
   display: block;
   align-items: center;
-  width: 60%;
   font-size: 5vw;
-  color: #FF6347;
+  color: blue;
 }
 
 .countdown {
