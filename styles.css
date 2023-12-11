@@ -30,7 +30,7 @@ body {
   }
 
   #year {
-    rotate: 90;
-    font-size: 10vw;
+    rotate: -90deg;
+    font-size: 15vw;
   }
 }
