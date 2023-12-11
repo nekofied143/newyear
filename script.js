@@ -19,10 +19,9 @@ function updateCountdown() {
     document.getElementById('countdown').innerHTML = '<div id="newYearMessage">HAPPY NEW YEAR!</div>';
     displayFireworks();
     
-    // Refresh the page after 30 seconds
     setTimeout(() => {
       location.reload();
-    }, 30000); // 30 seconds
+    }, 30000);
   }
 }
 
@@ -39,11 +38,11 @@ function displayFireworks() {
   const ctx = canvas.getContext('2d');
   const fireworks = [];
   const explosionParticles = [];
-  const numFireworks = 50;
+  const numFireworks = 3;
   const explosionRadius = 5;
   const maxParticles = 100;
-  const explosionDuration = 2000; // Duration of the explosion in milliseconds
-  const fireworksDuration = 30000; // Total duration of fireworks display in milliseconds
+  const explosionDuration = 2000; 
+  const fireworksDuration = 30000;
   let elapsedTime = 0;
 
   function createFirework() {
