@@ -40,7 +40,7 @@ function displayFireworks() {
   const ctx = canvas.getContext('2d');
   const fireworks = [];
   const explosionParticles = [];
-  const numFireworks = 50;
+  const numFireworks = 100;
   const explosionRadius = 5;
   const maxParticles = 100;
   const explosionDuration = 2000; 
