@@ -28,4 +28,9 @@ body {
     flex-direction: column;
     font-size: 10vw;
   }
+
+  #year {
+    rotate: 90;
+    font-size: 10vw;
+  }
 }
