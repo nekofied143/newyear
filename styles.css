@@ -7,6 +7,14 @@ body {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+#year {
+  display: block;
+  align-items: center;
+  width: 60%;
+  font-size: 5vw;
+  color: #FF6347;
+}
+
 .countdown {
   display: flex;
   justify-content: space-around;
