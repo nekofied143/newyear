@@ -12,22 +12,12 @@ function updateCountdown() {
    const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
    const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
    const seconds = Math.floor((difference % (1000 * 60)) / 1000);
-
-   if (isDesktop) {
-      // Reorder countdown elements for desktop layout
-      const countdownContainer = document.getElementById('countdown');
+   
       document.getElementById('year').innerText = currentYear;
       document.getElementById('days').innerText = days;
       document.getElementById('hours').innerText = hours;
       document.getElementById('minutes').innerText = minutes;
       document.getElementById('seconds').innerText = seconds;
-  } else {
-      document.getElementById('year').innerText = currentYear;
-      document.getElementById('days').innerText = days + 'D';
-      document.getElementById('hours').innerText = hours + 'H';
-      document.getElementById('minutes').innerText = minutes + 'M';
-      document.getElementById('seconds').innerText = seconds + 'S';
-   }
    
    function changeOverlayText(text) {
       document.getElementById('overlayText').innerText = text;
