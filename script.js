@@ -6,11 +6,27 @@ function updateCountdown() {
    const difference = newYear - currentTime;
    const currentMonth = currentTime.getMonth();
    const currentDay = currentTime.getDate();
+   const isDesktop = window.matchMedia('(min-width: 1024px)').matches;
 
    const days = Math.floor(difference / (1000 * 60 * 60 * 24));
    const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
    const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
    const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+   if (isDesktop) {
+    // Reorder countdown elements for desktop layout
+    const countdownContainer = document.getElementById('countdown');
+    const days = document.getElementById('days');
+    const hours = document.getElementById('hours');
+    const minutes = document.getElementById('minutes');
+    const seconds = document.getElementById('seconds');
+
+    // Append elements in the specified order for desktop display
+    countdownContainer.appendChild(days);
+    countdownContainer.appendChild(hours);
+    countdownContainer.appendChild(minutes);
+    countdownContainer.appendChild(seconds);
+  }
 
    document.getElementById('year').innerText = currentYear;
    document.getElementById('days').innerText = days + 'D';
