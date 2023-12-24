@@ -50,7 +50,7 @@ body {
 
 @media (max-width: 768px) {
   body {
-    font-family: -webkit-body;
+    font-family: 'Abril Fatface', cursive;
   }
   
   .countdown {
