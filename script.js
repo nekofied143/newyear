@@ -17,7 +17,7 @@ function updateCountdown() {
       // Reorder countdown elements for desktop layout
       const countdownContainer = document.getElementById('countdown');
       document.getElementById('year').innerText = currentYear;
-      document.getElementById('days').innerText = days + 'DAYS';
+      document.getElementById('days').innerText = days + '\nDAYS';
       document.getElementById('hours').innerText = hours + 'HOURS';
       document.getElementById('minutes').innerText = minutes + 'MINUTES';
       document.getElementById('seconds').innerText = seconds + 'SECONDS';
