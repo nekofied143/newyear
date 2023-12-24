@@ -20,6 +20,7 @@ function updateCountdown() {
       clearInterval(countdown);
       document.getElementById('countdown').innerHTML = '<div id="newYearMessage">HAPPY NEW YEAR!</div>';
       displayFireworks();
+      document.body.style.transition = 'background-color 3s ease';
       document.body.style.backgroundColor = '#000';
 
       setTimeout(() => {
