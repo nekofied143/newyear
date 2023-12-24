@@ -21,13 +21,6 @@ function updateCountdown() {
       document.getElementById('hours').innerText = hours;
       document.getElementById('minutes').innerText = minutes;
       document.getElementById('seconds').innerText = seconds;
-      
-      // Append elements in the specified order for desktop display
-      countdownContainer.appendChild(days);
-      countdownContainer.appendChild(hours);
-      countdownContainer.appendChild(minutes);
-      countdownContainer.appendChild(seconds);
-      
   } else {
       document.getElementById('year').innerText = currentYear;
       document.getElementById('days').innerText = days + 'D';
