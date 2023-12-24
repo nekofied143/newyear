@@ -5,12 +5,27 @@ body {
   align-items: center;
   height: 100vh;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  position: relative;
 }
 
 #year {
-  align-items: center;
-  font-size: 5vw;
-  color: blue;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 15vw;
+  color: #000;
+  opacity: 0.5; /* Set initial opacity to 50% */
+  z-index: -1; /* Put it behind other content */
+}
+
+#overlayText {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 3vw;
+  color: #FFF;
+  z-index: 1; /* Put it in front of the year */
 }
 
 .countdown {
