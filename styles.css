@@ -56,7 +56,7 @@ body {
   .countdown {
     align-items: center;
     flex-direction: column;
-    font-size: 20vw;
+    font-size: 15vw;
   }
 
   .time small {
