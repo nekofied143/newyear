@@ -41,10 +41,6 @@ body {
   font-size: inherit;
 }
 
-.countdown-labels {
-  font-size: 3vw;
-}
-
 @media (max-width: 768px) {
   .countdown {
     align-items: center;
