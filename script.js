@@ -14,26 +14,26 @@ function updateCountdown() {
    const seconds = Math.floor((difference % (1000 * 60)) / 1000);
 
    if (isDesktop) {
-    // Reorder countdown elements for desktop layout
-    const countdownContainer = document.getElementById('countdown');
-    const days = document.getElementById('days');
-    const hours = document.getElementById('hours');
-    const minutes = document.getElementById('minutes');
-    const seconds = document.getElementById('seconds');
-
-    // Append elements in the specified order for desktop display
-    countdownContainer.appendChild(days);
-    countdownContainer.appendChild(hours);
-    countdownContainer.appendChild(minutes);
-    countdownContainer.appendChild(seconds);
-  }
-
-   document.getElementById('year').innerText = currentYear;
-   document.getElementById('days').innerText = days + 'D';
-   document.getElementById('hours').innerText = hours + 'H';
-   document.getElementById('minutes').innerText = minutes + 'M';
-   document.getElementById('seconds').innerText = seconds + 'S';
-
+      // Reorder countdown elements for desktop layout
+      const countdownContainer = document.getElementById('countdown');
+      const days = document.getElementById('days');
+      const hours = document.getElementById('hours');
+      const minutes = document.getElementById('minutes');
+      const seconds = document.getElementById('seconds');
+      
+      // Append elements in the specified order for desktop display
+      countdownContainer.appendChild(days);
+      countdownContainer.appendChild(hours);
+      countdownContainer.appendChild(minutes);
+      countdownContainer.appendChild(seconds);
+  } else {
+      document.getElementById('year').innerText = currentYear;
+      document.getElementById('days').innerText = days + 'D';
+      document.getElementById('hours').innerText = hours + 'H';
+      document.getElementById('minutes').innerText = minutes + 'M';
+      document.getElementById('seconds').innerText = seconds + 'S';
+   }
+   
    function changeOverlayText(text) {
       document.getElementById('overlayText').innerText = text;
    }
