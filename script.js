@@ -17,10 +17,10 @@ function updateCountdown() {
       // Reorder countdown elements for desktop layout
       const countdownContainer = document.getElementById('countdown');
       document.getElementById('year').innerText = currentYear;
-      document.getElementById('days').innerText = days;
-      document.getElementById('hours').innerText = hours;
-      document.getElementById('minutes').innerText = minutes;
-      document.getElementById('seconds').innerText = seconds;
+      document.getElementById('days').innerText = days + 'DAYS';
+      document.getElementById('hours').innerText = hours + 'HOURS';
+      document.getElementById('minutes').innerText = minutes + 'MINUTES';
+      document.getElementById('seconds').innerText = seconds + 'SECONDS';
   } else {
       document.getElementById('year').innerText = currentYear;
       document.getElementById('days').innerText = days + 'D';
