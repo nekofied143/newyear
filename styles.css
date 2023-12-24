@@ -15,7 +15,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 40vw; /* Set font size to cover 40% of the viewport width */
-  color: rgba(0, 0, 0, 0.3); /* Set text color with 30% opacity */
+  color: rgba(0, 0, 0, 0.2); /* Set text color with 20% opacity */
   z-index: -1; /* Put it behind other content */
 }
 
