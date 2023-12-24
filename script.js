@@ -4,6 +4,8 @@ function updateCountdown() {
    const nextYear = currentYear + 1;
    const newYear = new Date(nextYear, 0, 1, 0, 0, 0, 0);
    const difference = newYear - currentTime;
+   const currentMonth = currentTime.getMonth();
+   const currentDay = currentTime.getDate();
 
    const days = Math.floor(difference / (1000 * 60 * 60 * 24));
    const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -15,6 +17,19 @@ function updateCountdown() {
    document.getElementById('hours').innerText = hours + 'H';
    document.getElementById('minutes').innerText = minutes + 'M';
    document.getElementById('seconds').innerText = seconds + 'S';
+
+   if (currentMonth === 11 && currentDay === 25) {
+    clearInterval(countdown);
+      document.getElementById('countdown').innerHTML = '<div id="christmasMessage">MERRY CHRISTMAS!</div>';
+      displayFireworks();
+      document.body.style.transition = 'background-color 3s ease';
+      document.body.style.backgroundColor = '#FFD700';
+      
+      setTimeout(() => {
+      location.reload();
+    }, 30000);
+   }
+}
 
    if (difference <= 0) {
       clearInterval(countdown);
