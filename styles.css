@@ -29,7 +29,7 @@ body {
   }
 
   #year {
-    rotate: -90deg;
+    transform: rotate(-90deg);
     font-size: 15vw;
   }
 }
