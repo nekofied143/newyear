@@ -31,7 +31,6 @@ body {
 .countdown {
   display: flex;
   justify-content: space-between;
-  width: 40%;
   font-size: 5vw;
   color: #FF6347;
 }
