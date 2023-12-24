@@ -28,7 +28,7 @@ function updateCountdown() {
       document.getElementById('countdown').innerHTML = '<div id="christmasMessage">MERRY CHRISTMAS!</div>';
       displayFireworks();
       document.body.style.transition = 'background-color 3s ease';
-      document.body.style.backgroundColor = '#FFD700';
+      document.body.style.backgroundColor = '#000';
 
       setTimeout(() => {
          location.reload();
