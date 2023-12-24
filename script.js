@@ -25,7 +25,7 @@ function updateCountdown() {
 
    if (currentMonth === 11 && currentDay === 25) {
       clearInterval(countdown);
-      document.getElementById('countdown').innerHTML = '<div id="christmasMessage">MERRY CHRISTMAS!</div>';
+      document.getElementById('countdown').innerHTML = '<div id="christmasMessage" style="color: white;">MERRY CHRISTMAS!</div>';
       displayFireworks();
       document.body.style.transition = 'background-color 3s ease';
       document.body.style.backgroundColor = '#000';
@@ -37,7 +37,7 @@ function updateCountdown() {
 
    if (difference <= 0) {
       clearInterval(countdown);
-      document.getElementById('countdown').innerHTML = '<div id="newYearMessage">HAPPY NEW YEAR!</div>';
+      document.getElementById('countdown').innerHTML = '<div id="newYearMessage" style="color: white;">HAPPY NEW YEAR!</div>';
       displayFireworks();
       document.body.style.transition = 'background-color 3s ease';
       document.body.style.backgroundColor = '#000';
