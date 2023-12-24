@@ -12,13 +12,13 @@ function updateCountdown() {
    const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
    const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
    const seconds = Math.floor((difference % (1000 * 60)) / 1000);
-   
-      document.getElementById('year').innerText = currentYear;
-      document.getElementById('days').innerText = days;
-      document.getElementById('hours').innerText = hours;
-      document.getElementById('minutes').innerText = minutes;
-      document.getElementById('seconds').innerText = seconds;
-   
+
+   document.getElementById('year').innerText = currentYear;
+   document.getElementById('days').innerText = days;
+   document.getElementById('hours').innerText = hours;
+   document.getElementById('minutes').innerText = minutes;
+   document.getElementById('seconds').innerText = seconds;
+
    function changeOverlayText(text) {
       document.getElementById('overlayText').innerText = text;
    }
