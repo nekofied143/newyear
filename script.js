@@ -18,9 +18,9 @@ function updateCountdown() {
       const countdownContainer = document.getElementById('countdown');
       document.getElementById('year').innerText = currentYear;
       document.getElementById('days').innerText = days + '\nDAYS';
-      document.getElementById('hours').innerText = hours + 'HOURS';
-      document.getElementById('minutes').innerText = minutes + 'MINUTES';
-      document.getElementById('seconds').innerText = seconds + 'SECONDS';
+      document.getElementById('hours').innerText = hours + '\nHOURS';
+      document.getElementById('minutes').innerText = minutes + '\nMINUTES';
+      document.getElementById('seconds').innerText = seconds + '\nSECONDS';
   } else {
       document.getElementById('year').innerText = currentYear;
       document.getElementById('days').innerText = days + 'D';
