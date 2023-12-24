@@ -4,7 +4,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: 'Abril Fatface', cursive;
   position: relative; /* Added position relative to position the text */
   overflow: hidden; /* Hide overflow to prevent scrollbars due to large text */
 }
