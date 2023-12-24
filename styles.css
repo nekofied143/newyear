@@ -14,8 +14,8 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 50vw; /* Set font size to cover 50% of the viewport width */
-  color: rgba(0, 0, 0, 0.5); /* Set text color with 50% opacity */
+  font-size: 40vw; /* Set font size to cover 40% of the viewport width */
+  color: rgba(0, 0, 0, 0.7); /* Set text color with 70% opacity */
   z-index: -1; /* Put it behind other content */
 }
 
@@ -44,7 +44,7 @@ body {
   }
 
   #year {
-    font-size: 50vh; /* Adjust the font size for smaller devices */
+    font-size: 40vh; /* Adjust the font size for smaller devices */
     transform: translate(-50%, -50%) rotate(-90deg); /* Rotate and center the text */
     top: 50%;
     left: 50%;
