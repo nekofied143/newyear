@@ -18,16 +18,20 @@ function updateCountdown() {
    document.getElementById('minutes').innerText = minutes + 'M';
    document.getElementById('seconds').innerText = seconds + 'S';
 
+   function changeOverlayText(text) {
+      document.getElementById('overlayText').innerText = text;
+   }
+
    if (currentMonth === 11 && currentDay === 25) {
-    clearInterval(countdown);
+      clearInterval(countdown);
       document.getElementById('countdown').innerHTML = '<div id="christmasMessage">MERRY CHRISTMAS!</div>';
       displayFireworks();
       document.body.style.transition = 'background-color 3s ease';
       document.body.style.backgroundColor = '#FFD700';
-      
+
       setTimeout(() => {
-      location.reload();
-    }, 30000);
+         location.reload();
+      }, 30000);
    }
 
    if (difference <= 0) {
