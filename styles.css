@@ -36,6 +36,11 @@ body {
   color: #FF6347;
 }
 
+.countdown > div {
+  text-align: center;
+  width: 22%; /* Adjusted width for each countdown element */
+}
+
 @media (max-width: 768px) {
   .countdown {
     align-items: center;
