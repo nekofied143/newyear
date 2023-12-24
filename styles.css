@@ -49,6 +49,10 @@ body {
 }
 
 @media (max-width: 768px) {
+  body {
+    font-family: -webkit-body;
+  }
+  
   .countdown {
     align-items: center;
     flex-direction: column;
