@@ -42,8 +42,8 @@ body {
 
 .time small {
   display: flex;
-  padding: 0 0 25px;
-  font-size: 5vw;
+  padding: 0 25px;
+  font-size: 3vw;
   text-align: center;
 }
 
