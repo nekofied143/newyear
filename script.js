@@ -29,7 +29,6 @@ function updateCountdown() {
       location.reload();
     }, 30000);
    }
-}
 
    if (difference <= 0) {
       clearInterval(countdown);
