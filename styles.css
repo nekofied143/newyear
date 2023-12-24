@@ -54,6 +54,11 @@ body {
     font-size: 20vw;
   }
 
+  .time small {
+    padding: inherit;
+    padding-bottom: 5vw;
+  }
+
   #year {
     font-size: 40vh; /* Adjust the font size for smaller devices */
     transform: translate(-50%, -50%) rotate(-90deg); /* Rotate and center the text */
