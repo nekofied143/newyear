@@ -31,7 +31,6 @@ body {
 .countdown {
   
   display: flex;
-  align-items: center;
   justify-content: space-between;
   font-size: 5vw;
   color: #FF6347;
@@ -39,6 +38,7 @@ body {
 
 .countdown > div {
   text-align: center;
+  padding: 2%;
 }
 
 @media (max-width: 768px) {
@@ -58,9 +58,5 @@ body {
 @media (min-width: 1024px) {
   .countdown {
     justify-content: space-around;
-  }
-  
-  .countdown > div {
-    width: auto; /* Let the elements adjust width as per content on larger screens */
   }
 }
