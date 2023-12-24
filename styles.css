@@ -41,6 +41,7 @@ body {
 }
 
 .time small {
+  color: black;
   display: flex;
   padding: 0 25px;
   font-size: 3vw;
