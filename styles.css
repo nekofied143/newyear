@@ -41,6 +41,10 @@ body {
   font-size: inherit;
 }
 
+.time small {
+  font-size: 10px;
+}
+
 @media (max-width: 768px) {
   .countdown {
     align-items: center;
