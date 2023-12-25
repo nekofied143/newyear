@@ -6,7 +6,9 @@ function updateCountdown() {
    const difference = newYear - currentTime;
    const currentMonth = currentTime.getMonth();
    const currentDay = currentTime.getDate();
-   const isDesktop = window.matchMedia('(min-width: 1024px)').matches;
+   const currentHour = currentTime.getHours();
+   const currentMinute = currentTime.getMinutes();
+   const currentSecond = currentTime.getSeconds();
 
    const days = Math.floor(difference / (1000 * 60 * 60 * 24));
    const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -19,36 +21,102 @@ function updateCountdown() {
    document.getElementById('minutes').innerText = minutes;
    document.getElementById('seconds').innerText = seconds;
 
-   function changeOverlayText(text) {
-      document.getElementById('overlayText').innerText = text;
+   let fireworksDisplayed = false; // Variable to track if fireworks have been displayed
+
+   if (currentMonth === 11 && currentDay === 25 && currentHour === 0 && currentMinute === 0 && currentSecond === 0) {
+      clearInterval(countdown);
+      const countdownElement = document.getElementById('countdown');
+      countdownElement.innerHTML = '<div id="christmasMessage" style="color: white;">MERRY CHRISTMAS!</div>';
+      document.body.style.transition = 'background-color 3s ease';
+      document.body.style.backgroundColor = '#000';
+
+      if (!fireworksDisplayed) {
+         displayFireworks(); // Display fireworks only once after showing the Christmas message
+         fireworksDisplayed = true; // Update the flag to indicate fireworks have been displayed
+      }
+
+      setTimeout(() => {
+         document.getElementById('christmasMessage').innerText = ''; // Clear the message
+         document.body.style.backgroundColor = '#FFF'; // Reset background color
+
+         // Rebuild the countdown HTML structure
+         const countdownHTML = `
+         <div class="time">
+            <span id="days"></span>
+            <small>DAYS</small>
+         </div>
+         <div class="time">
+            <span id="hours"></span>
+            <small>HOURS</small>
+         </div>
+         <div class="time">
+            <span id="minutes"></span>
+            <small>MINUTES</small>
+         </div>
+         <div class="time">
+            <span id="seconds"></span>
+            <small>SECONDS</small>
+         </div>
+      `;
+         countdownElement.innerHTML = countdownHTML;
+
+         // Resume countdown
+         countdown = setInterval(() => {
+            updateCountdown();
+         }, 1000);
+      }, 30000);
    }
 
-   if (currentMonth === 11 && currentDay === 25) {
+
+   if (currentMonth === 0 && currentDay === 1 && currentHour === 0 && currentMinute === 0 && currentSecond === 0) {
       clearInterval(countdown);
-      document.getElementById('countdown').innerHTML = '<div id="christmasMessage" style="color: white;">MERRY CHRISTMAS!</div>';
-      displayFireworks();
+      const countdownElement = document.getElementById('countdown');
+      countdownElement.innerHTML = '<div id="christmasMessage" style="color: white;">MERRY CHRISTMAS!</div>';
       document.body.style.transition = 'background-color 3s ease';
       document.body.style.backgroundColor = '#000';
 
-      setTimeout(() => {
-         location.reload();
-      }, 30000);
-      return;
-   } 
-   
-   if (difference <= 0) {
-      clearInterval(countdown);
-      document.getElementById('countdown').innerHTML = '<div id="newYearMessage" style="color: white;">HAPPY NEW YEAR!</div>';
-      displayFireworks();
-      document.body.style.transition = 'background-color 3s ease';
-      document.body.style.backgroundColor = '#000';
+      if (!fireworksDisplayed) {
+         displayFireworks(); // Display fireworks only once after showing the Christmas message
+         fireworksDisplayed = true; // Update the flag to indicate fireworks have been displayed
+      }
 
       setTimeout(() => {
-         location.reload();
+         document.getElementById('christmasMessage').innerText = ''; // Clear the message
+         document.body.style.backgroundColor = '#FFF'; // Reset background color
+
+         // Rebuild the countdown HTML structure
+         const countdownHTML = `
+         <div class="time">
+            <span id="days"></span>
+            <small>DAYS</small>
+         </div>
+         <div class="time">
+            <span id="hours"></span>
+            <small>HOURS</small>
+         </div>
+         <div class="time">
+            <span id="minutes"></span>
+            <small>MINUTES</small>
+         </div>
+         <div class="time">
+            <span id="seconds"></span>
+            <small>SECONDS</small>
+         </div>
+      `;
+         countdownElement.innerHTML = countdownHTML;
+
+         // Resume countdown
+         countdown = setInterval(() => {
+            updateCountdown();
+         }, 1000);
       }, 30000);
-      return;
    }
 }
+// Initial call to start the countdown
+updateCountdown();
+
+// Update the countdown every second
+countdown = setInterval(updateCountdown, 1000);
 
 function displayFireworks() {
    const canvas = document.createElement('canvas');
@@ -139,7 +207,7 @@ function displayFireworks() {
             }
          });
       } else {
-         canvas.parentNode.removeChild(canvas); // Remove the canvas after fireworksDuration
+         return;
       }
 
       requestAnimationFrame(draw);
@@ -147,9 +215,3 @@ function displayFireworks() {
 
    draw();
 }
-
-// Initial call to start the countdown
-updateCountdown();
-
-// Update the countdown every second
-const countdown = setInterval(updateCountdown, 1000);
