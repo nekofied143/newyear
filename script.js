@@ -71,17 +71,17 @@ function updateCountdown() {
    if (currentMonth === 0 && currentDay === 1 && currentHour === 0 && currentMinute === 0 && currentSecond === 0) {
       clearInterval(countdown);
       const countdownElement = document.getElementById('countdown');
-      countdownElement.innerHTML = '<div id="christmasMessage" style="color: white;">MERRY CHRISTMAS!</div>';
+      countdownElement.innerHTML = '<div id="NewYear" style="color: white;">HAPPY NEW YEAR!</div>';
       document.body.style.transition = 'background-color 3s ease';
       document.body.style.backgroundColor = '#000';
 
       if (!fireworksDisplayed) {
-         displayFireworks(); // Display fireworks only once after showing the Christmas message
+         displayFireworks(); // Display fireworks only once after showing the New Year message
          fireworksDisplayed = true; // Update the flag to indicate fireworks have been displayed
       }
 
       setTimeout(() => {
-         document.getElementById('christmasMessage').innerText = ''; // Clear the message
+         document.getElementById('NewYear').innerText = ''; // Clear the message
          document.body.style.backgroundColor = '#FFF'; // Reset background color
 
          // Rebuild the countdown HTML structure
