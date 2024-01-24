@@ -1,2 +1,2 @@
-# newyear
-A simple New Year's Countdown page.
+# HOLIDAY
+A simple Holiday Countdown page.
