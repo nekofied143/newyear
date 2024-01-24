@@ -45,7 +45,6 @@ body {
   display: flex;
   padding: 0 25px;
   font-size: 3vw;
-  text-align: center;
   justify-content: space-evenly;
 }
 
