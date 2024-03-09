@@ -70,7 +70,7 @@ function updateCountdown() {
 
    if (currentMonth === 0 && currentDay === 1 && currentHour === 0 && currentMinute === 0 && currentSecond === 0) {
       clearInterval(countdown);
-      playNewYearMusic(); // Play New Year music
+      // playNewYearMusic(); // Play New Year music
       const countdownElement = document.getElementById('countdown');
       countdownElement.innerHTML = '<div id="NewYear" style="color: white;">HAPPY NEW YEAR!</div>';
       document.body.style.transition = 'background-color 3s ease';
@@ -82,7 +82,7 @@ function updateCountdown() {
       }
 
       setTimeout(() => {
-         stopMusic(); // Stop New Year music
+         // stopMusic(); // Stop New Year music
          document.getElementById('NewYear').innerText = ''; // Clear the message
          document.body.style.backgroundColor = '#FFF'; // Reset background color
 
@@ -120,20 +120,20 @@ updateCountdown();
 // Update the countdown every second
 countdown = setInterval(updateCountdown, 1000);
 
-function playNewYearMusic() {
-   // Add code to play New Year music (e.g., create an audio element, set the source, and play)
-   const audioElement = new Audio('sounds/newyear.mp3');
-   audioElement.loop = true; // Set loop to true for continuous playback
-   audioElement.play();
-}
+// function playNewYearMusic() {
+//    // Add code to play New Year music (e.g., create an audio element, set the source, and play)
+//    const audioElement = new Audio('sounds/newyear.mp3');
+//    audioElement.loop = true; // Set loop to true for continuous playback
+//    audioElement.play();
+// }
 
-function stopMusic() {
-   // Add code to stop the currently playing music (if any)
-   const audioElements = document.getElementsByTagName('audio');
-   for (const audioElement of audioElements) {
-      audioElement.pause();
-   }
-}
+// function stopMusic() {
+//    // Add code to stop the currently playing music (if any)
+//    const audioElements = document.getElementsByTagName('audio');
+//    for (const audioElement of audioElements) {
+//       audioElement.pause();
+//    }
+// }
 
 function displayFireworks() {
    const canvas = document.createElement('canvas');
